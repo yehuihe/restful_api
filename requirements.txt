@@ -15,6 +15,7 @@ importlib-metadata==4.8.2
 itsdangerous==2.0.1
 Jinja2==3.0.3
 MarkupSafe==2.0.1
+psycopg2==2.7.3
 Pygments==2.10.0
 PyJWT==1.4.2
 PySocks==1.7.1
