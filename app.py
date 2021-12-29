@@ -4,10 +4,10 @@ from flask import Flask
 from flask_jwt import JWT
 from flask_restful import Api
 
-from security import authenticate, identity
-from resources.user import UserRegister
+from resources.user import UserRegister, User
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
+from security import authenticate, identity
 
 
 uri = os.getenv("DATABASE_URL")  # or other relevant config var
@@ -31,6 +31,7 @@ api.add_resource(StoreList, '/stores')
 api.add_resource(Item, '/item/<string:name>')
 api.add_resource(ItemList, '/items')
 api.add_resource(UserRegister, '/register')
+api.add_resource(User, '/user/<int:user_id>')
 
 
 if __name__ == '__main__':
